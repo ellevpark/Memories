@@ -1,8 +1,17 @@
 import {TextField, Button, Typography, Paper} from '@material-ui/core';
 import useStyles from './styles.js';
+import {useState} from 'react';
 
 
 const Form = () => {
+    const [postData, setPostData] = useState({
+        creator: '', 
+        title: '', 
+        message: '',
+        tags: '', 
+        selectedFile: ''       
+    });
+
     const classes = useStyles();
 
     const handleSubmit = () => {
